@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <title>Documentation | DashLite React Admin Dashboard Template</title>
+    <link rel="stylesheet" href="assets/css/docs.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-91615293-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-91615293-4');
+    </script>
+</head>
+
+<body class="nk-body bg-lighter npc-general has-sidebar">
+    <div class="nk-app-root">
+        <!-- main @s -->
+        <div class="nk-main ">
+            <!-- sidebar @s -->
+            <div class="nk-sidebar nk-sidebar-fixed is-light" data-content="sidebarMenu">
+                <div class="nk-sidebar-element nk-sidebar-head">
+                    <div class="nk-sidebar-brand">
+                        <a href="#" class="logo-link nk-sidebar-logo">
+                            <img class="logo-light logo-img" src="images/logo.png" srcset="images/logo2x.png 2x" alt="DashLite">
+                            <img class="logo-dark logo-img" src="images/logo-dark.png" srcset="images/logo-dark2x.png 2x" alt="DashLite">
+                        </a>
+                    </div>
+                    <div class="nk-menu-trigger mr-n2">
+                        <a href="#" class="nk-nav-toggle nk-quick-nav-icon d-xl-none" data-target="sidebarMenu"><em class="icon ni ni-arrow-left"></em></a>
+                    </div>
+                </div>
+                <div class="nk-sidebar-element">
+                    <div class="nk-sidebar-content mt-4">
+                        <div class="nk-sidebar-menu" data-simplebar>
+                            <ul class="nk-menu">
+                                <li class="nk-menu-heading">
+                                    <h6 class="overline-title text-primary-alt">Getting Started</h6>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="#introduction" class="nk-menu-link">
+                                        <span class="nk-menu-text">Introduction</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="#quickStart" class="nk-menu-link">
+                                        <span class="nk-menu-text">Quick Start</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="#productionBuild" class="nk-menu-link">
+                                        <span class="nk-menu-text">Production Build</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="#fileFolders" class="nk-menu-link">
+                                        <span class="nk-menu-text">File and Folders</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="#cssList" class="nk-menu-link">
+                                        <span class="nk-menu-text">Styles</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="#theming" class="nk-menu-link">
+                                        <span class="nk-menu-text">Theming</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="#newPage" class="nk-menu-link">
+                                        <span class="nk-menu-text">Creating New Page</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="#newDirectory" class="nk-menu-link">
+                                        <span class="nk-menu-text">Add Menu Directory</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="#routing" class="nk-menu-link">
+                                        <span class="nk-menu-text">Routing</span>
+                                    </a>
+                                </li>
+                                
+                                <li class="nk-menu-item">
+                                    <a href="#sourcesCredits" class="nk-menu-link">
+                                        <span class="nk-menu-text">Sources and Credits</span>
+                                    </a>
+                                </li>
+
+                                <li class="nk-menu-item">
+                                    <a href="changelogs.html" class="nk-menu-link">
+                                        <span class="nk-menu-text">Change Logs</span>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- sidebar @e -->
+            <!-- wrap @s -->
+            <div class="nk-wrap">
+                <!-- Include main header @s -->
+                <div class="nk-header nk-header-fixed bg-white">
+    <div class="container-fluid">
+        <div class="nk-header-wrap">
+            <div class="nk-menu-trigger d-xl-none ml-n1">
+                <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
+            </div>
+            <div class="nk-header-brand d-xl-none">
+                <a href="#" class="logo-link">
+                    <img class="logo-light logo-img" src="images/logo.png" srcset="images/logo2x.png 2x" alt="DashLite">
+                    <img class="logo-dark logo-img" src="images/logo-dark.png" srcset="images/logo-dark2x.png 2x" alt="DashLite">
+                </a>
+            </div>
+            <div class="nk-header-docs-nav">
+                <div class="dropdown dropdown-expand-lg">
+                    <a href="#" class="btn btn-icon btn-trigger dropdown-toggle" data-toggle="dropdown">
+                        <em class="icon ni ni-more-h"></em>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-inner">
+                            <p class="lead-text text-soft pt-4 mb-0 d-lg-none">View Dashboard</p>
+                            <ul class="docs-nav">
+                                <li><a href="https://react.dashlite.net/demo1/">Demo 1</a></li>    
+                                <li><a href="https://react.dashlite.net/demo2/">Demo 2</a></li>
+                                <li><a href="https://react.dashlite.net/demo3/">Demo 3</a></li>
+                                <li><a href="https://react.dashlite.net/demo4/">Demo 4</a></li>
+                                <li><a href="https://react.dashlite.net/demo5/">Demo 5</a></li>
+                                <li><a href="https://react.dashlite.net/demo6/">Demo 6</a></li>
+                                <li><a href="https://react.dashlite.net/demo7/">Demo 7</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                <!-- main header @e -->
+                <!-- content @s -->
+                <div class="nk-content ">
+                    <div class="container-fluid">
+                        <div class="nk-content-inner">
+                            <div class="nk-content-body">
+                                <div class="wide-md mx-auto">
+                                    <!-- content @s -->
+                                    <div class="nk-block-head wide-sm">
+                                        <div class="nk-block-head-content pt-2">
+                                            <h3 class="nk-block-title">DashLite React Documentation</h3>
+                                            <div class="nk-block-des">
+                                                <p class="lead">DashLite React is a modern and user friendly dashboard template with individual concepts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="nk-block-head" id="introduction">
+                                        <div class="nk-block-head-content pt-2">
+                                            <h5 class="nk-block-title">Introduction</h5>
+                                            <div class="nk-block-des">
+                                                <p>DashLite React, a modern and clean premium quality dashboard template based on Bootstrap 4 using concept driven and minimal design. Its well optimized with mobile first responsive approach. DashLite React is built using SASS preprocessor, HTML5, CSS3 and help of usefull npm plugins. The template is built with the latest version of a javascript framework called React, making it completely free of jquery dependency. You can use this template for any kind of dashboard project.</p>
+                                                <br/>
+                                                <p>It is made up of react hooks. In few instances, context api has been used for better handling of the application. For optimization purposes Lazy Loading have been introduced, this should increase the performance of the application. All these are kept a file structure which is very easy to handle and extremely user friendly.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr class="hr border-light mt-5 mb-4">
+                                    <div class="nk-block" id="quickStart">
+                                        <div class="nk-block-head">
+                                            <div class="nk-block-head-content pt-2">
+                                                <h5 class="nk-block-title">Quick Start - install</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="card card-bordered">
+                                            <div class="card-inner">
+                                                <ul class="gy-2">
+                                                    <li>
+                                                        - Download the latest theme source from <a href="https://themeforest.net/downloads">themeforest</a>.
+                                                    </li>
+                                                    <li>
+                                                        - Download and install Node.js from <a href="https://nodejs.org/en/download/">nodejs.org/en/download/</a>
+                                                    </li>
+                                                    <li>
+                                                        - Start command prompt window or terminal and change directory to [dashLite-react/demo{1|2|3|4|5|6}] folder and run following command to install all the "dependencies and devDependencies". It could take few minutes to complete installation.
+
+<div class="code-block-small mt-3">
+<button class="btn btn-sm clipboard-init" title="Copy to clipboard" data-clipboard-target="#npmi" data-clip-success="Copied" data-clip-text="Copy"><span class="clipboard-text">Copy</span></button>
+<pre class="prettyprint lang-html" id="npmi">
+npm install
+</pre>
+</div>
+                                                    </li>
+                                                    <li>
+                                                        - Then start the development server on <code>localhost:3000</code> use <code>npm start</code>
+
+<div class="code-block-small mt-3">
+<button class="btn btn-sm clipboard-init" title="Copy to clipboard" data-clipboard-target="#npmStart" data-clip-success="Copied" data-clip-text="Copy"><span class="clipboard-text">Copy</span></button>
+<pre class="prettyprint lang-html" id="npmStart">
+npm start
+</pre>
+</div>
+
+                                                    </li>
+                                                </ul>
+                                                <div class="alert alert-warning alert-dim mt-4">
+                                                    The default port on running the application is 3000. If you have any other application running on the same port, a warning will be prompt. If you want to run on a port of your choice set the .env file such as: 
+<div class="code-block-small mt-3">
+<button class="btn btn-sm clipboard-init" title="Copy to clipboard" data-clipboard-target="#envPort" data-clip-success="Copied" data-clip-text="Copy"><span class="clipboard-text">Copy</span></button>
+<pre class="prettyprint lang-html" id="envPort">
+$ export PORT=3005 #Linux
+$ $env:PORT=3005 # Windows - Powershell
+</pre>
+</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--block-->
+
+                                    
+
+                                    <hr class="hr border-light mt-5 mb-4">
+                                    <div class="nk-block" id="productionBuild">
+                                        <div class="nk-block-head">
+                                            <div class="nk-block-head-content pt-2">
+                                                <h5 class="nk-block-title">Production Build</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="card card-bordered">
+                                            <div class="card-inner">
+                                                <ul class="g-2">
+                                                    <li>
+                                                        - For production build, use <code>npm run build</code>. A build folder will be created with the bundled files.
+
+<div class="code-block-small mt-3">
+<button class="btn btn-sm clipboard-init" title="Copy to clipboard" data-clipboard-target="#npmBuild" data-clip-success="Copied" data-clip-text="Copy"><span class="clipboard-text">Copy</span></button>
+<pre class="prettyprint lang-html" id="npmBuild">
+npm run build
+</pre>
+</div>                                                  
+                                                    </li>
+                                                    <li>
+                                                        <strong>Following the execution of this code, a new folder called build folder will be created in the root folder.</strong>
+                                                        <br/>
+                                                        
+                                                        <span>If you’re using Apache HTTP Server, you need to create a .classComponent file in the public folder which has been already provided in the public folder, or just add the file with the following code</span>
+<div class="code-block-small mt-3">
+<button class="btn btn-sm clipboard-init" title="Copy to clipboard" data-clipboard-target="#htaccess" data-clip-success="Copied" data-clip-text="Copy"><span class="clipboard-text">Copy</span></button>
+<pre class="prettyprint lang-html" id="htaccess">
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]
+</pre>
+</div>   
+                                                    </li>
+                                                    <li> - Add the entire url of the domain at the homepage field in package.json file.</li>
+                                                </ul>
+                                                <div class="alert alert-info alert-dim mt-4">
+                                                    For more information about the react build tool, <a href="https://reactjs.org/docs/create-a-new-react-app.html">click here</a>.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- nk-block -->
+
+
+                                    <hr class="hr border-light mt-5 mb-4">
+                                    <div class="nk-block" id="fileFolders">
+                                        <div class="nk-block-head">
+                                            <div class="nk-block-head-content pt-2">
+                                                <h5 class="nk-block-title">File And Folders</h5>
+                                            </div>
+                                        </div>
+
+<div class="code-block">
+<pre class="prettyprint lang-js" id="filesandfolder">
+  |--docs/
+  |--dashLite-template/
+  |--|--demo1
+  |--|--|--build/
+  |--|--|--public/
+  |--|--|--src/
+  |--|--|--|--assets/
+  |--|--|--|--|--css/
+  |--|--|--|--|--fonts/
+  |--|--|--|--|--images/
+  |--|--|--|--|--scss/
+  |--|--|--|--components/
+  |--|--|--|--|--block/
+  |--|--|--|--|--button/
+  |--|--|--|--|--chats/
+  |--|--|--|--|--email/
+  |--|--|--|--|--grid/
+  |--|--|--|--|--icon/
+  |--|--|--|--|--input/
+  |--|--|--|--|--|--switch/
+  |--|--|--|--|--links/
+  |--|--|--|--|--pagination/
+  |--|--|--|--|--partials/
+  |--|--|--|--|--preview/
+  |--|--|--|--|--select/
+  |--|--|--|--|--sidebar/
+  |--|--|--|--|--table/
+  |--|--|--|--|--text/
+  |--|--|--|--|--tooltip/
+  |--|--|--|--|--user/
+  |--|--|--|--|--Component.js
+  |--|--|--|--images/
+  |--|--|--|--layout/
+  |--|--|--|--|--content/
+  |--|--|--|--|--footer/
+  |--|--|--|--|--head/
+  |--|--|--|--|--logo/
+  |--|--|--|--|--menu/
+  |--|--|--|--|--news/
+  |--|--|--|--|--page-container/
+  |--|--|--|--|--sidebar/
+  |--|--|--|--|--index.js
+  |--|--|--|--pages/
+  |--|--|--|--|--app/
+  |--|--|--|--|--auth/
+  |--|--|--|--|--components/
+  |--|--|--|--|--error/
+  |--|--|--|--|--others/
+  |--|--|--|--|--pre-built/
+  |--|--|--|--|--Analytic.js
+  |--|--|--|--|--Crypto.js
+  |--|--|--|--|--Homepage.js
+  |--|--|--|--|--Invest.js
+  |--|--|--|--route/
+  |--|--|--|--utils/
+  |--|--|--|--App.js
+  |--|--|--|--App.test.js
+  |--|--|--|--index.js
+  |--|--|--.env
+  |--|--|--package-lock.json
+  |--|--|--package.json
+  |--|--demo2
+  |--|--|--src/
+  | More
+</pre>
+    </div>
+</div><!-- nk-block -->
+
+                                        <hr class="hr border-light mt-5 mb-4">
+                                        <div class="nk-block" id="cssList">
+                                            <div class="nk-block-head wide-sm">
+                                                <div class="nk-block-head-content pt-2">
+                                                    <h5 class="nk-block-title">Styles</h5>
+                                                </div>
+                                            </div>
+<div class="code-block">
+<h6 class="overline-title title">SCSS File List</h6>
+<span>All the scss files are linked to the react app in <code>Index.js</code> file of the root folder</span>
+<br/>
+<pre class="prettyprint lang-html" id="styleLink">
+&lt;!-- All Generated styles form dashlite --&gt;
+import &quot;assets/scss/dashlite.scss&quot;
+import &quot;assets/scss/email-style.scss&quot;
+&lt;!-- You can add your own css or scss files in a similar way --&gt;
+import &quot;assets/scss/YOUR_FILE.scss&quot;
+</pre>
+</div><!-- nk-block -->
+
+                                            <hr class="hr border-light mt-5 mb-4">
+                                            <div class="nk-block" id="theming">
+                                                <div class="nk-block-head wide-sm">
+                                                    <div class="nk-block-head-content pt-2">
+                                                        <h5 class="nk-block-title">Theming</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="row g-gs">
+                                                    <div class="col-12">
+                                                        <div class="card card-bordered">
+                                                            <div class="card-inner">
+                                                                <h6 class="overline-title">Dark mode</h6>
+                                                                <p>Visit the directory, <code>src/layout/Index.js</code> and <code>src/layout/page-container/PageContainer.js</code>. There is an js object for theme initially, just add <code>skin : "dark"</code> for dark mode for both the files.</p>
+                                                                
+                                                                <p>There are several themes that can be placed in the objects and every component can be maintained independently.</p>
+                                                                <span> Themes include : <code>dark || light || white || theme</code></span>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+<div class="col-12">
+    <div class="code-block">
+        <h6 class="overline-title title">Example</h6>
+<pre class="prettyprint lang-html">
+    // Light skin
+    {
+        header : "light",
+        sidebar : "white",
+        skin : "light"
+    }
+
+    // Dark skin
+    {
+        header : "dark",
+        sidebar : "dark",
+        skin : "dark",
+    }
+</pre>
+            </div>
+        </div>
+    </div>
+</div><!-- nk-block -->
+
+                                        <hr class="hr border-light mt-5 mb-4">
+                                        <div class="nk-block" id="newPage">
+                                            <div class="nk-block-head wide-sm">
+                                                <div class="nk-block-head-content pt-2">
+                                                    <h5 class="nk-block-title">Create A Component</h5>
+                                                </div>
+                                            </div>
+                                            <div class="row g-gs">
+                                                <div class="col-12">
+                                                    <div class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <h6 class="overline-title">Creating a new component.</h6>
+                                                            <p>By default react provides two different types of components. Create a folder in the <code>/src/pages</code> directory. Then add it to the routing system. Go through the <a href="#routing">Routing</a> section to learn further.</p>
+                                                            
+                                                            <p><strong>Class Based Components</strong></p>
+<div class="code-block-small mt-3 mb-3">
+<button class="btn btn-sm clipboard-init" title="Copy to clipboard" data-clipboard-target="#classComponent" data-clip-success="Copied" data-clip-text="Copy"><span class="clipboard-text">Copy</span></button>
+<pre class="prettyprint lang-html" id="classComponent">
+import React from "react"
+
+class Example extends React.Component {
+    render () {
+        return (
+            &lt;div&gt;
+                // The jsx goes here
+            &lt;div/&gt;
+        )
+    }
+}
+
+export default Example;
+</pre>
+</div>
+                                                    <p><strong>Functional Components</strong></p>
+<div class="code-block-small mt-3">
+<button class="btn btn-sm clipboard-init" title="Copy to clipboard" data-clipboard-target="#funcComponent" data-clip-success="Copied" data-clip-text="Copy"><span class="clipboard-text">Copy</span></button>
+<pre class="prettyprint lang-html" id="funcComponent">
+import React from "react"
+
+const Example = () => {
+    
+    return (
+        &lt;div&gt;
+            // The jsx goes here
+        &lt;div/&gt;
+    )
+    
+}
+
+export default Example;
+</pre>
+</div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div><!-- nk-block -->
+
+                                        <hr class="hr border-light mt-5 mb-4">
+                                        <div class="nk-block" id="newDirectory">
+                                            <div class="nk-block-head wide-sm">
+                                                <div class="nk-block-head-content pt-2">
+                                                    <h5 class="nk-block-title">Add menu to the sidebar</h5>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="card card-bordered">
+                                                <div class="card-inner">
+                                                    <h6 class="overline-title">Creating a new component.</h6>
+                                                    <p>To add any directory to the menubar or sidebar. You can add it to the <code>MenuData.js</code> file. The file is located in the directory <code>src/layout/menu</code>. You can also add the desired icon along with any subdirectories. Here is an example.</p>
+<div class="code-block-small mt-3">
+<button class="btn btn-sm clipboard-init" title="Copy to clipboard" data-clipboard-target="#addSidebar" data-clip-success="Copied" data-clip-text="Copy"><span class="clipboard-text">Copy</span></button>
+<pre class="prettyprint lang-html" id="addSidebar">
+{
+    icon: "tile-thumb", // Icon name
+    text: "New Page", // Directory name
+    active: false, // false for being collapsed by default
+    subMenu: [      // sub directory
+        {
+            text: "New Page Cards",
+            link: "/page-card",  //route link
+        },
+        {
+            text: "New Page List",
+            link: "/page-list", // route link
+        },
+    ],
+},
+</pre>
+</div>
+                                               
+                                                </div>
+                                                <div class="card-inner">
+                                                    <h6 class="overline-title">Adding badges to menu.</h6>
+                                                    <p>To add any <code>badge</code> to any content of the menu. You can add it to the <code>MenuData.js</code> file. The file is located in the directory <code>src/layout/menu</code>. Here is an example.</p>
+<div class="code-block-small mt-3">
+<button class="btn btn-sm clipboard-init" title="Copy to clipboard" data-clipboard-target="#tagMenu" data-clip-success="Copied" data-clip-text="Copy"><span class="clipboard-text">Copy</span></button>
+<pre class="prettyprint lang-html" id="tagMenu">
+{
+    icon: "tile-thumb", // Icon name
+    text: "New Page", // Directory name
+    active: false, // false for being collapsed by default
+    subMenu: [      // sub directory
+        {
+            text: "New Page Cards",
+            link: "/page-card",  //route link
+            badge: "new" // badge
+        },
+        {
+            text: "New Page List",
+            link: "/page-list", // route link
+        },
+    ],
+},
+</pre>
+</div>
+                                               
+                                                </div>
+                                            </div>
+                                        </div><!-- nk-block -->
+
+                                        <hr class="hr border-light mt-5 mb-4">
+                                        <div class="nk-block" id="routing">
+                                            <div class="nk-block-head wide-sm">
+                                                <div class="nk-block-head-content pt-2">
+                                                    <h5 class="nk-block-title">Routing</h5>
+                                                </div>
+                                            </div>
+                                            <div class="card card-bordered">
+                                                <div class="card-inner">
+                                                    <h6 class="overline-title">Private Route</h6>
+                                                    <p>All the routes are defined in the <code>Index.js</code> file in the <code>src/routes</code> directory. By default all the routes in the file are private and cannot be accessed without authentication. In this application a very simple authentication is set up,  and the key is kept on localstorage upon login. You have to set up your own auth system if required.</p>
+                                                    <h6 class="overline-title">Public Route</h6>
+                                                    <p>To set public routes, you have to add routes to the <code>App.js</code> file in the root directory. Other routes such as auth and error pages are also set up in there. Another important page is displaying the 404 error page. The error page is shown in the <code>Index.js</code> file in the root directory. Therefore to change to the default error page, make sure to replace the <code>Error404Modern</code> component.</p>
+<div class="code-block-small mt-3">
+<button class="btn btn-sm clipboard-init" title="Copy to clipboard" data-clipboard-target="#routes" data-clip-success="Copied" data-clip-text="Copy"><span class="clipboard-text">Copy</span></button>
+<pre class="prettyprint lang-html" id="routes">
+&lt;Route exact path="/route_here" component={Component} /&gt;
+</pre>
+</div>
+                                                    <div class="alert alert-info alert-dim mt-4">
+                                                        The entire routing system has been built using react-router-dom, visit <a href="https://reactrouter.com/web/guides/quick-start">React router</a> to learn more. 
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div><!-- nk-block -->
+
+                                        <hr class="hr border-light mt-5 mb-4">
+                                        <div class="nk-block" id="sourcesCredits">
+                                            <div class="nk-block-head wide-sm">
+                                                <div class="nk-block-head-content pt-2">
+                                                    <h5 class="nk-block-title">Sources and Credits</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="row g-gs">
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://reactstrap.github.io/" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">Reactstrap</h6>
+                                                                    <p>https://reactstrap.github.io/</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://react-slick.neostack.com/" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">React Slick</h6>
+                                                                    <p>https://react-slick.neostack.com/</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://chartjs.org/" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">Chart JS</h6>
+                                                                    <p>https://chartjs.org/</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://github.com/Grsmto/simplebar" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">SimpleBar</h6>
+                                                                    <p>https://github.com/Grsmto/simplebar</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://react-select.com" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">React Select</h6>
+                                                                    <p>https://react-select.com</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://www.npmjs.com/package/react-modal-video" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">React Modal Video</h6>
+                                                                    <p>https://www.npmjs.com/package/react-modal-video</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://github.com/kadoshms/react-jvectormap" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">React jvectormap</h6>
+                                                                    <p>https://github.com/kadoshms/react-jvectormap</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://react-hook-form.com/" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">React Hook Form</h6>
+                                                                    <p>https://react-hook-form.com/</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://github.com/nfl/react-helmet" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">React Helmet</h6>
+                                                                    <p>https://github.com/nfl/react-helmet</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://github.com/react-syntax-highlighter/react-syntax-highlighter" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">React Syntax Highlighter</h6>
+                                                                    <p>https://github.com/react-syntax-highlighter/react-syntax-highlighter</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://www.dropzonejs.com/" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">DropZone</h6>
+                                                                    <p>https://www.dropzonejs.com/</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://fullcalendar.io/" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">FullCalendar</h6>
+                                                                    <p>https://fullcalendar.io/</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://momentjs.com/" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">Moment</h6>
+                                                                    <p>https://momentjs.com/</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://www.npmjs.com/package/html-react-parser" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">Html React Parser</h6>
+                                                                    <p>https://www.npmjs.com/package/html-react-parser</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://react-data-table-component.netlify.app" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">React Data Table Component</h6>
+                                                                    <p>https://react-data-table-component.netlify.app</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://www.npmjs.com/package/react-dual-listbox" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">React Dual ListBox</h6>
+                                                                    <p>https://www.npmjs.com/package/react-dual-listbox</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://www.npmjs.com/package/react-beautiful-dnd" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">React Beautiful Dnd</h6>
+                                                                    <p>https://www.npmjs.com/package/react-beautiful-dnd</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://www.npmjs.com/package/react-jstree-table" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">React Jstree Table</h6>
+                                                                    <p>https://www.npmjs.com/package/react-jstree-table</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://www.npmjs.com/package/react-quilljs" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">React Quilljs</h6>
+                                                                    <p>https://www.npmjs.com/package/react-quilljs</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a target="_blank" href="https://www.tiny.cloud/tinymce" class="card card-bordered">
+                                                        <div class="card-inner">
+                                                            <div class="align-center justify-between">
+                                                                <div class="g">
+                                                                    <h6 class="title">Tinymce</h6>
+                                                                    <p>https://www.tiny.cloud/tinymce</p>
+                                                                </div>
+                                                                <div class="g">
+                                                                    <span class="btn btn-icon btn-trigger mr-n1"><em class="icon ni ni-chevron-right"></em></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                
+                                            </div>
+                                        </div><!-- nk-block -->
+                                    <!-- content @e -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- content @e -->
+            </div>
+            <!-- wrap @e -->
+        </div>
+        <!-- main @e -->
+        </div>
+    </div>
+    <!-- app-root @e -->
+    <!-- JavaScript -->
+    <script src="assets/js/bundle.js?ver=1.0.0"></script>
+    <script src="assets/js/scripts.js?ver=1.0.0"></script>
+</body>
+
+</html>

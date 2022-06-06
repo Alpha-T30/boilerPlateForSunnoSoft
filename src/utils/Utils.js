@@ -1,4 +1,6 @@
-import { Redirect } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
+
+import { Redirect } from "react-router";
 
 //url for production
 export var url = "";

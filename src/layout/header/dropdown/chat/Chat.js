@@ -3,7 +3,7 @@ import { DropdownMenu, DropdownToggle, UncontrolledDropdown } from "reactstrap";
 import { Icon } from "../../../../components/Component";
 import { ChatItemHeader } from "../../../../pages/app/chat/ChatPartials";
 import { chatData } from "../../../../pages/app/chat/ChatData";
-import { withRouter } from "react-router";
+// import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
 
 const ChatDropdown = () => {
@@ -34,4 +34,4 @@ const ChatDropdown = () => {
   );
 };
 
-export default withRouter(ChatDropdown);
+export default ChatDropdown;

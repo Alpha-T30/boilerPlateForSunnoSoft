@@ -24,25 +24,17 @@ const Login = () => {
   const [errorVal, setError] = useState("");
 
   const onFormSubmit = (formData) => {
-    setLoading(true);
-    const loginName = "info@anthony.com";
-    const pass = "123456";
-    if (formData.name === loginName && formData.passcode === pass) {
-      localStorage.setItem("accessToken", "token");
-      setTimeout(() => {
-        window.history.pushState(
-          `${process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "/"}`,
-          "auth-login",
-          `${process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "/"}`
-        );
-        window.location.reload();
-      }, 2000);
-    } else {
-      setTimeout(() => {
-        setError("Cannot login with credentials");
-        setLoading(false);
-      }, 2000);
-    }
+    // setLoading(true);
+    // const loginName = "info@anthony.com";
+    // const pass = "123456";
+    // if (formData.name === loginName && formData.passcode === pass) {
+    //   localStorage.setItem("accessToken", "token");
+    // } else {
+    //   setTimeout(() => {
+    //     setError("Cannot login with credentials");
+    //     setLoading(false);
+    //   }, 2000);
+    // }
   };
 
   const { errors, register, handleSubmit } = useForm();

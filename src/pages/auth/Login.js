@@ -17,24 +17,28 @@ import Head from "../../layout/head/Head";
 import AuthFooter from "./AuthFooter";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logInSuccess } from "../../redux/authSlice";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
   const [passState, setPassState] = useState(false);
   const [errorVal, setError] = useState("");
-
+  const dispatch = useDispatch();
+  let navigate = useNavigate();
   const onFormSubmit = (formData) => {
-    // setLoading(true);
-    // const loginName = "info@anthony.com";
-    // const pass = "123456";
-    // if (formData.name === loginName && formData.passcode === pass) {
-    //   localStorage.setItem("accessToken", "token");
-    // } else {
-    //   setTimeout(() => {
-    //     setError("Cannot login with credentials");
-    //     setLoading(false);
-    //   }, 2000);
-    // }
+    setLoading(true);
+    dispatch(
+      logInSuccess({
+        name: "Enamul Haque",
+        age: "25",
+        mobile: "+8801611126730",
+        roles: [2001, 1984, 5150],
+      })
+    );
+    navigate("/", { replace: true });
+    setLoading(false);
   };
 
   const { errors, register, handleSubmit } = useForm();
@@ -130,7 +134,7 @@ const Login = () => {
             </Form>
             <div className="form-note-s2 text-center pt-4">
               {" "}
-              New on our platform? <Link to={`${process.env.PUBLIC_URL}/auth-register`}>Create an account</Link>
+              New on our platform? <Link to={`/register`}>Create an account</Link>
             </div>
             <div className="text-center pt-4 pb-3">
               <h6 className="overline-title overline-title-sap">

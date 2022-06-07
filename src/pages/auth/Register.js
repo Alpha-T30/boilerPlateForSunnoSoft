@@ -122,7 +122,7 @@ const Register = ({ history }) => {
             <div className="form-note-s2 text-center pt-4">
               {" "}
               Already have an account?{" "}
-              <Link to={`${process.env.PUBLIC_URL}/auth-login`}>
+              <Link to={`/login`}>
                 <strong>Sign in instead</strong>
               </Link>
             </div>

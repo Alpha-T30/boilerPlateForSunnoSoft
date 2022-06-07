@@ -11,7 +11,7 @@ import {
   BackTo,
   PreviewTable,
   CodeBlock,
-  PreviewCard
+  PreviewCard,
 } from "../../components/Component";
 import { Row, Col } from "reactstrap";
 

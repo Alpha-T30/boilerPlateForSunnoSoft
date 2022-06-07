@@ -73,6 +73,7 @@ const menu = [
     active: false,
     link: "/",
   },
+
   // {
   //   icon: "tile-thumb-fill",
   //   text: "Projects",

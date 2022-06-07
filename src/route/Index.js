@@ -19,16 +19,9 @@ const Pages = () => {
   return (
     <Suspense fallback={<div />}>
       <Routes>
-        {/* public routes */}
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
-        <Route path="unauthorized" element={<Unauthorized />} />
-
-        {/* we want to protect these routes */}
         <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
           <Route path="/" element={<Homepage />} />
         </Route>
-        <Route path="*" element={<Missing />} />
       </Routes>
     </Suspense>
   );

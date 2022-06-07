@@ -3,13 +3,14 @@ import { DropdownToggle, DropdownMenu, Dropdown } from "reactstrap";
 import { Icon } from "../../../../components/Component";
 import { LinkList, LinkItem } from "../../../../components/links/Links";
 import UserAvatar from "../../../../components/user/UserAvatar";
-
+import { logout } from "../../../../redux/authSlice";
+import { useDispatch } from "react-redux";
 const User = () => {
   const [open, setOpen] = useState(false);
   const toggle = () => setOpen((prevState) => !prevState);
-
+  const dispatch = useDispatch();
   const handleSignout = () => {
-    localStorage.removeItem("accessToken");
+    dispatch(logout());
   };
 
   return (
@@ -57,10 +58,10 @@ const User = () => {
         </div>
         <div className="dropdown-inner">
           <LinkList>
-            <a href={`${process.env.PUBLIC_URL}/auth-login`} onClick={handleSignout}>
+            <div style={{ cursor: "pointer" }} onClick={handleSignout}>
               <Icon name="signout"></Icon>
               <span>Sign Out</span>
-            </a>
+            </div>
           </LinkList>
         </div>
       </DropdownMenu>

@@ -138,17 +138,12 @@ const MenuItem = ({ icon, link, text, sub, subPanel, panel, newTab, mobileView, 
   const menuItemClass = classNames({
     "nk-menu-item": true,
     "has-sub": sub,
-    "active current-page": currentUrl === process.env.PUBLIC_URL + link,
+    "active current-page": currentUrl === link,
   });
   return (
     <li className={menuItemClass} onClick={(e) => toggleActionSidebar(e)}>
       {newTab ? (
-        <Link
-          to={`${process.env.PUBLIC_URL + link}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nk-menu-link"
-        >
+        <Link to={link} target="_blank" rel="noopener noreferrer" className="nk-menu-link">
           {icon ? (
             <span className="nk-menu-icon">
               <Icon name={icon} />
@@ -157,11 +152,7 @@ const MenuItem = ({ icon, link, text, sub, subPanel, panel, newTab, mobileView, 
           <span className="nk-menu-text">{text}</span>
         </Link>
       ) : (
-        <NavLink
-          to={`${process.env.PUBLIC_URL + link}`}
-          className={`nk-menu-link${sub ? " nk-menu-toggle" : ""}`}
-          onClick={sub ? menuToggle : null}
-        >
+        <NavLink to={link} className={`nk-menu-link${sub ? " nk-menu-toggle" : ""}`} onClick={sub ? menuToggle : null}>
           {icon ? (
             <span className="nk-menu-icon">
               <Icon name={icon} />
@@ -188,11 +179,7 @@ const PanelItem = ({ icon, link, text, subPanel, index, data, setMenuData, ...pr
   if (data === menu) {
     return (
       <li className={menuItemClass}>
-        <Link
-          to={`${process.env.PUBLIC_URL}${link}`}
-          className="nk-menu-link"
-          onClick={() => setMenuData([menu[index]])}
-        >
+        <Link to={link} className="nk-menu-link" onClick={() => setMenuData([menu[index]])}>
           {icon ? (
             <span className="nk-menu-icon">
               <Icon name={icon} />
@@ -218,7 +205,7 @@ const PanelItem = ({ icon, link, text, subPanel, index, data, setMenuData, ...pr
         ))}
         <MenuHeading heading="Return to" />
         <li className={menuItemClass}>
-          <Link to={`${process.env.PUBLIC_URL}/`} className="nk-menu-link" onClick={() => setMenuData(menu)}>
+          <Link to={`/`} className="nk-menu-link" onClick={() => setMenuData(menu)}>
             <span className="nk-menu-icon">
               <Icon name="dashlite-alt" />
             </span>
@@ -226,7 +213,7 @@ const PanelItem = ({ icon, link, text, subPanel, index, data, setMenuData, ...pr
           </Link>
         </li>
         <li className={menuItemClass}>
-          <Link to={`${process.env.PUBLIC_URL}/`} className="nk-menu-link" onClick={() => setMenuData(menu)}>
+          <Link to={`/`} className="nk-menu-link" onClick={() => setMenuData(menu)}>
             <span className="nk-menu-icon">
               <Icon name="layers-fill" />
             </span>
@@ -264,7 +251,7 @@ const Menu = ({ sidebarToggle, mobileView }) => {
   useEffect(() => {
     data.forEach((item, index) => {
       if (item.panel) {
-        let found = item.subPanel.find((sPanel) => process.env.PUBLIC_URL + sPanel.link === window.location.pathname);
+        let found = item.subPanel.find((sPanel) => sPanel.link === window.location.pathname);
         if (found) {
           setMenuData([menu[index]]);
         }

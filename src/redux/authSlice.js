@@ -1,22 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  currentUser: {
-    name: "Enamul Haque",
-    age: "25",
-    mobile: "+8801611126730",
-    roles: [2001, 1984, 5150],
-  },
+  currentUser: null,
 };
 
 const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    logInSuccess: (state, action) => {},
+    logInSuccess: (state, action) => {
+      state.currentUser = action.payload;
+    },
+    logout: (state, action) => {
+      state.currentUser = null;
+    },
   },
 });
 
-export const { logInSuccess } = authSlice.actions;
+export const { logInSuccess, logout } = authSlice.actions;
 
 export default authSlice.reducer;
